@@ -1,5 +1,7 @@
 angular.module('starter.services', [])
 
+
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
@@ -47,4 +49,14 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('User', function ($http) {
+  function CadastrarUsuario (user) {
+    console.log(user);
+  }
+
+  return{
+    cadastrar: CadastrarUsuario
+  }
 });

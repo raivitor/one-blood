@@ -1,5 +1,20 @@
 angular.module('starter.controllers', [])
 
+.controller('CadastroCtrl', function($scope, User) {
+  $scope.teste = ["Não sei","A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
+  
+  $scope.submit = function () {
+    usuario = {};
+    usuario.nome = $scope.nome;
+    usuario.nascimento = $scope.nascimento;
+    usuario.tipoSanguineo = $scope.tipoSanguineo;
+    usuario.senha = $scope.senha;
+    console.log(usuario);
+    User.cadastrar(usuario);
+  }
+
+})
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {

@@ -1,0 +1,32 @@
+<ion-view view-title="Cadastro">
+  <ion-content>
+
+    <div class="list">
+      <form ng-submit="submit()">
+
+        <label class="item item-input">
+          <input type="text" ng-model="nome" placeholder="Nome Completo" required="">
+        </label>
+
+        <label class="item item-input">
+          <input type="date" ng-model="nascimento" placeholder="Data de nascimento dd/mm/aaaa" required="">
+        </label>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Tipo sanquineo
+          </div>
+          <select ng-model="tipoSanguineo" ng-init="tipoSanguineo=teste[0]" ng-options="tipoSanguineo for tipoSanguineo in teste"></select>
+        </label>
+
+        <label class="item item-input">
+          <input type="password" ng-model="senha" placeholder="Senha" required="">
+        </label>
+
+        <button class="button button-block button-positive">
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>
